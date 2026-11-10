@@ -62,3 +62,31 @@ pixels meet canon. Those are separate source-review, transport and B219
 acceptance gates. A private transport script must call `verify_package()`
 **before** any permitted request; passing a static check never authorizes an
 image-generation call. Public regression tests use synthetic data only.
+
+## Historical scene binding and model-visible reference roles (R3)
+
+The generic `scene_transport_guard.py` builds on `locked_package_guard.py`.
+It runs **offline** and requires two independent private attestations:
+
+- `historical_moment`: event ID equals the requested scene, the archived
+  event-cell is the authority for equipment *state at that time*, and later
+  events are excluded. A current equipment sheet may provide item definitions
+  only, not override the archived pose or lantern state. Physical anchors and
+  historical exclusions are checked against the locked approved prompt.
+- `role_guidance`: a separately hashed UTF-8 text file enumerating each PNG's
+  order, canonical reference cell, and role (`morphology`/`environment`).
+  Its hash and ordered roles must match both the manifest and attestation.
+
+Offline command: `python tools/scene-prompt-guard/scene_transport_guard.py /private/path/to/package`
+
+The approved scene prompt file is **not rewritten**. A future Image API call
+can send `role_guidance + '\n\n' + approved_prompt` as a single model-visible
+text field. **This is an expanded effective request text**. It must be explicitly
+approved for transmission; do not mistake retaining the approved prompt
+substring for an unchanged entire API input. Filename-only or unrecognized
+metadata are not valid role delivery mechanisms.
+
+These checks are consistency tests, not verified connection to live canonical
+sheets or a proof of model understanding. They never perform image generation.
+Keep all real prompt text, references, event IDs, character state and the
+complete private manifest/attestation outside this public repository.
