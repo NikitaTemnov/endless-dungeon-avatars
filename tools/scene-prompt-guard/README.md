@@ -22,3 +22,7 @@ python -m unittest discover -s tools/scene-prompt-guard -p 'test_*.py' -v
 The JSON schema is implicit in the `validate` function. It demands `category=scene`, `race_profile=adult_biosynthetic_skitalets`, `style_profile=cinematic_aaa_dark_fantasy_pbr`, sources for character/equipment/pose/location/lighting, reference URLs and `pixels_reviewed=true`, actual physical details, and reasonable light radius.
 
 Generated text is **not** proof of canon. The next gate is to examine the **actual sent generator prompt**, if accessible, and the real output pixels. The current ChatGPT image tool can rewrite prompts; this script cannot override that.
+
+## Explicit Abyss Artist scene-correction workflow
+
+See [ARTIST_WORKFLOW.md](ARTIST_WORKFLOW.md) for the separate **Stage 0–6** commissioned-art pipeline, user approval after **each** of four scenes, contextual isolation from gameplay responses, and final four-image delivery. The game chat's own illustration-at-end-of-turn procedure is a different workflow. This checker is a **preflight aid**, not a generator or pixel auditor; it cannot bypass a hidden prompt rewrite. Do not put real character scene snapshots or non-public game state in this public repository.
