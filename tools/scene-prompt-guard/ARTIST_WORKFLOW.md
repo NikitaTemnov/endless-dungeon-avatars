@@ -32,7 +32,7 @@ Let `N` be the number of **unapproved, explicitly commissioned** scenes after th
 4. If the generator's positive prompt is silently substituted and cannot be verified, record `generator_prompt_is_controllable=false` and **stop** rather than claiming static-guard success implies a correct image.
 5. Inspect each output: artificial adult puppet-like Skitalets anatomy, face/mask and eyes, actual clothes, right/left held objects, symbiote count/location, light source/range, wet/dry stone and explored bounds. A visual mismatch is not canonical.
 6. Reject and log errors; change the root cause before retrying. After three rejected attempts or repeated prompt substitution, stop that generator route and provide a controlled handoff. Do not reset this limit by changing chat.
-7. Always display canonical Artist avatar, short narrative status, stage progress and a **real interactive action**. After each image, offer user approval, revision and free-text comments. Never infer approval from technical upload or a formerly rejected queue status.
+7. Follow the **mandatory [Artist response UI contract](ARTIST_UI_CONTRACT.md)**: standalone avatar OUTSIDE all bordered boxes; actual bordered TEXT information blocks; real controlled radio/textarea/button with a synchronous action; masculine Художник voice. Never replace these with plain Markdown headings, fake square-bracket buttons or visual-only choices. Every workflow response must contain a working action and optional comment when decisions are collected. After each image, offer user approval, revision and free-text comments. Never infer approval from technical upload or a formerly rejected queue status.
 
 ## Private information
 
