@@ -37,3 +37,8 @@ Let `N` be the number of **unapproved, explicitly commissioned** scenes after th
 ## Private information
 
 The GitHub repository is public; keep actual scene IDs, player actions, undiscovered geography, full prompts and inventory **out of GitHub**. Store the current project's five-scene selection and source pointers only in private Artist protocol. See [scene-prompt-guard README](README.md). This PR may remain Draft; merging it is a separate decision.
+
+
+## Interrupted-turn recovery
+
+8. **After interruption/cancellation** of ANY prior assistant response, render the entire Artist UI afresh in the very next answer: avatar outside boxes; icon-led bordered narrative and status; real controlled choice/comment/submit components near the top. Never assume previous controls survived. Always offer Approve/Revise for pending art. Preserve the last explicit user approvals, ongoing scene ID and image-production order; do not accidentally re-run generation or change canon. See ARTIST_UI_CONTRACT.md §Interrupted-answer recovery. Repository code documents this rule but cannot change the ChatGPT client renderer.
