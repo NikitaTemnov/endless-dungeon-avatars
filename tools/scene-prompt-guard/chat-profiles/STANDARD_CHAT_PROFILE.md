@@ -39,3 +39,14 @@
 
 ## Current scope
 This document **does not authorize** any image generation, new game turn, sheet write, or change to already completed art. The user's per-turn request governs the task.
+
+## Repair 2026-11-12 · single-message interactive state
+
+**Incident:** A STANDARD Artist response split its visible answer into an early partial FINAL containing `{@body ... DIL.useState(...)}` hooks and a later terminal FINAL containing `<radio-group>`, `<textarea>`, and `<button>`. The user reported that the comment field was missing and the button did nothing. This split is a **credible compatibility risk**, not an established renderer root-cause diagnosis.
+
+**Mandatory mitigation:**
+1. **Do not split interactive DIL across separate partial/terminal FINAL messages.** Keep ALL unconditional state declarations, the real interactive controls and their direct user-triggered host action in **one single terminal FINAL response**, authored and sent together. Use COMMENTARY for progress updates, never a partial FINAL with hooks for controls to be emitted later.
+2. Declare `{@body const [choice,setChoice]=DIL.useState("approve")}` and `{@body const [comment,setComment]=DIL.useState("")}` at the very top of that terminal FINAL; keep them in the SAME authored response as the controlled `<radio-group value={choice} onChange={setChoice}>`, `<textarea value={comment} onChange={setComment}>`, and `<button onClick={()=>GenUI.issueNewTurn(...)}>`.
+3. For the submit callback invoke `GenUI.issueNewTurn` **synchronously and directly** within a real `onClick`; do not defer it, put it inside useEffect or wrap it in inert Markdown/code. Always include the selected action **and the comment**; field optional for the user but visible.
+4. Do not claim verified click functionality without an actual user report. If the user says the control is still inoperative, provide an ordinary fallback instruction to reply directly in chat with the desired action/comment, without abandoning the real controls. A GitHub profile edit cannot modify ChatGPT's client renderer.
+5. **Isolation:** this mitigation belongs to STANDARD only and must not overwrite Work settings, merge the shared PR, create game turns, regenerate approved art or modify catalog assets.
