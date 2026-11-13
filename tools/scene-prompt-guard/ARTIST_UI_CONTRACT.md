@@ -89,3 +89,13 @@ The following snippet is a *template*. It is inert inside this Markdown file. Wh
 - Do not invent rendering success or a persistent automatic enforcement capability.
 
 **Scope:** Artist chat and its narrative interface only. This document contains no private scene snapshots or player data.
+
+## STANDARD vs WORK isolation and anti-pseudographic regression · v1.3
+
+The visible reference screenshot (2026-11-11) showed the failure mode: a duplicate Artist avatar plus a narrative "card" drawn with `╭ ─ │ ╰` text glyphs and a numbered choice list rather than real controls. A Unicode box is **not** an interactive/rounded ChatGPT UI component; never output a pseudo box as a fallback. **One standalone avatar per reply.**
+
+- **STANDARD Chat** uses the actual UI components available to this conversation: real `<box border radius="xl" ...>`, `<icon>`, `<radio-group>`, `<textarea>` and an action-wired `<button>`. Before replying, reject any generated text that begins a visual card with `╭`, `┌`, `│`, `╰` or `└`, any fake `[1]` menu as a substitute for controls, or a second identical avatar.
+- **WORK Chat** must maintain its own verified UI profile; do not copy STANDARD-only controls into a surface where they aren't supported. Equally, a Work repair is not permission to downgrade the ordinary chat to ASCII/Unicode mock UI.
+- **Profiles and ownership:** [STANDARD](chat-profiles/STANDARD_CHAT_PROFILE.md), [WORK template](chat-profiles/WORK_CHAT_PROFILE.md), [cross-chat coordination](CROSS_CHAT_COORDINATION.md). All share canon and approved originals, not conversation state. Changes to common contracts need a reviewable branch/PR and user approval before merge.
+- **No auto-application:** the ordinary chat must actually consult its profile and author a compliant reply; GitHub cannot modify the client's renderer, global ChatGPT instructions or another conversation.
+- **History and non-game operations:** Do not re-open scene orders, alter Sheets data or generate an image merely to repair the presentation rules.

@@ -42,3 +42,9 @@ The GitHub repository is public; keep actual scene IDs, player actions, undiscov
 ## Interrupted-turn recovery
 
 8. **After interruption/cancellation** of ANY prior assistant response, render the entire Artist UI afresh in the very next answer: avatar outside boxes; icon-led bordered narrative and status; real controlled choice/comment/submit components near the top. Never assume previous controls survived. Always offer Approve/Revise for pending art. Preserve the last explicit user approvals, ongoing scene ID and image-production order; do not accidentally re-run generation or change canon. See ARTIST_UI_CONTRACT.md §Interrupted-answer recovery. Repository code documents this rule but cannot change the ChatGPT client renderer.
+
+## Multi-chat ownership and category boundary · 2026-11-11
+
+The scene workflow above concerns **specifically commissioned narrative frames**, not the entity-graphics backlog. An approved narrative frame never fills an entity's catalog image cell. For an entity task, first audit existing approved originals, then fill the exact `Локации`/`Вещи`/`Существа`/`Ресурсы` image cell after pixel and provenance verification; only then count what remains missing. Keep separate IDs/statuses.
+
+This shared workflow is **not** a chat-specific UI or Work tool policy. For STANDARD and WORK coexistence read [cross-chat coordination](CROSS_CHAT_COORDINATION.md) and the appropriate [STANDARD](chat-profiles/STANDARD_CHAT_PROFILE.md) or [WORK](chat-profiles/WORK_CHAT_PROFILE.md) profile. Maintain chat-local branches, avoid concurrent writes to the same shared file/range, and do not claim Work-only capabilities inside STANDARD. A screenshot of a malformed UI in one chat is not proof that the other chat altered configuration.
