@@ -18,6 +18,17 @@
 
 **Minimal final audit sentence (internal, not printed):** "Один аватар? Два отдельных настоящих инфоблока? Видимое поле комментария? Настоящая кнопка с обработчиком, передающим решение и комментарий? Всё в одном terminal FINAL?" If any answer is No, DO NOT SEND.
 
+## USER TOOL-COST CORRECTION 2026-11-13 · native ChatGPT image generation only
+
+**User's direct correction and binding priority:** "Никаких платных инструментов! Ранее мы нормально создавали изображения через базовый функционал GPT." This supersedes prior Runway-credit/paid-plan proposals and the workflow's old Runway-first assumption for all ongoing Artist work.
+
+1. Default and ONLY authorized generation mechanism is the native ChatGPT image generation capability (built-in image tool), when the user has authorized creation. Do not initiate Runway, Adobe paid generation, paid external plugins, third-party image credit usage, upgrades, purchases or account billing flows. No costs or provider-credit confirmations should be introduced into this project without a NEW, explicit request to use that specific paid service. Internal credit count from a third-party connector is irrelevant to the native ChatGPT tool.
+2. The native tool may be subject to the user's normal product usage limits. Do not assert unlimited free generations or promise that a specific native request will succeed. If a normal limit or tool error occurs, report it accurately; do NOT route around the limit through paid providers.
+3. Continue the current approved creative scope (LOC-09, "Камера Белёсой Кромки (Эрик)", MS-005 "Бледнопанцирный влажник") via native image generation only, using the exact live canonical visual descriptions and APPROVED reference images. Previously generated rejected drafts remain rejected; never overwrite Sheets cells, close queue statuses, or assert approval without the user's explicit artistic acceptance.
+4. Native image generation returns user-visible artwork directly; never substitute a generated mock status panel, infographic, dashboard or faux approval form for the requested game asset. If generation fails to produce the proper subject or genre, fail QA, retain the prior originals, and state the issue rather than claiming success.
+5. For every Artist terminal answer, preserve live DIL decisions/comments/buttons as specified in the interaction gate; an image depicting a button is NOT a working button.
+6. This is a high-priority scope restriction for the STANDARD branch. It does not alter other agent roles, the game, or any other shared profile.
+
 ## CRITICAL ART-QA GATE 2026-11-13 · approved style references / strict candidate rejection
 
 **Observed regression:** LOC-09, «Камера Белёсой Кромки (Эрик)» and MS-005 «Бледнопанцирный влажник» underwent multiple unsuccessful iterations. Defects: excessive hyperrealism or smooth CAD-like stone, generators outputting fake dashboards instead of the requested in-world image, painted checkerboards instead of true alpha, and extra or uncountable legs. User rejected these files, explicitly prohibiting replacement of approved Sheets originals until artistic acceptance.
