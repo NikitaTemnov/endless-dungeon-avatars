@@ -18,6 +18,22 @@
 
 **Minimal final audit sentence (internal, not printed):** "Один аватар? Два отдельных настоящих инфоблока? Видимое поле комментария? Настоящая кнопка с обработчиком, передающим решение и комментарий? Всё в одном terminal FINAL?" If any answer is No, DO NOT SEND.
 
+## CRITICAL ART-QA GATE 2026-11-13 · approved style references / strict candidate rejection
+
+**Observed regression:** LOC-09, «Камера Белёсой Кромки (Эрик)» and MS-005 «Бледнопанцирный влажник» underwent multiple unsuccessful iterations. Defects: excessive hyperrealism or smooth CAD-like stone, generators outputting fake dashboards instead of the requested in-world image, painted checkerboards instead of true alpha, and extra or uncountable legs. User rejected these files, explicitly prohibiting replacement of approved Sheets originals until artistic acceptance.
+
+**Mandatory fail-closed visual preflight:**
+
+1. Re-read the exact entity row and category rules in Google Sheets. For catalog locations use «Визуальный стандарт» B3/B22, not the distinct cinematic scene B4; for non-Wanderer creatures B5/B22; verify the specific entity's canonical geometry/anatomy. Visually examine the actual pixels of an APPROVED PNG of the same category before generation, rather than trusting the word CGI or the title of a link.
+2. Generate only ONE standalone actual image component per requested asset. A fake UI/dashboard, status infographic, rendered mock approval button, contact sheet, poster or tool placeholder is AUTOMATIC REJECTION. Never present such a mockup as finished game artwork, regardless of model success.
+3. Locations: artistically controlled semi-stylized matte layered natural slate in 3D CGI, varied but broad geologically credible forms, nuanced cracks, soft muted gray illumination and believable material. Reject photorealistic stone noise, overly smooth CAD graybox walls, blocky clay shapes or outlined hand-painted scenes. Preserve location-specific exits, sources, darkness, mining and scale. Erik's whitish trace is a small LOW 45 cm x 5-8 cm deposit, not a cascading waterfall.
+4. Non-Wanderer creatures: whole visible species with readable silhouette, category-approved stylized CGI and all anatomically prescribed limbs. MS-005 requires EXACTLY SIX legs (three bilateral pairs), separate small mouth palps and no extraneous appendages; count and inspect all six feet in the actual candidate pixels.
+5. Transparency: verify ORIGINAL PNG mode/channels and true non-opaque RGBA alpha pixels outside the creature. A green chroma-key source or painted white/checkerboard background is NOT an accepted transparent deliverable. If original bytes cannot be checked, status = NOT VERIFIED, not alpha-confirmed.
+6. Distinguish generation completed, pixel QA passed, user approved, permanent source verified, and catalog integrated. Only user approval may advance acceptance. Never replace «Локации»!A58, «Существа»!A11 or fill «Локации»!A77 before the explicit respective decision; do not close the queue prematurely.
+7. Do not burn credits in repeated failed prompt loops. If a provider returns cost_confirmation_required, leave requests UNRUN until user authorizes the real cost through provider confirmation; do not evade by hopping paid models. State actual balance/uncertainty, never claim a costly generation ran when it did not.
+8. Display actual retrievable image artifacts, never an empty Adobe Preview Files placeholder; all real user-facing radio/comment/submit controls belong to DIL, NEVER to generated image art. Status-only messages still require the live action footer.
+9. Reject failed outputs with concrete defect notes instead of asking the user to approve an obviously wrong picture. On any blocker report verified status clearly and present the real user-action choices.
+
 ## START HERE · mandatory STANDARD live-response + source-scope gate (2026-11-12)
 
 This section is **first priority within this profile**. It corrects the latest recurrence (2026-11-12): the response was plain Markdown, used TWO identical Artist avatars, fake `[Отправить решение и комментарий]` text, no functional comment/submit controls, and **invented an ITEM-102 iron pickaxe** even though the current actual item type and cancellation status did not support it.
