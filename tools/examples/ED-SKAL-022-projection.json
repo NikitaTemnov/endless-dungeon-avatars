@@ -1,0 +1,17 @@
+{
+  "scene_id": "ED-SKAL-022",
+  "hero": "Скалоглав",
+  "symbiote": {
+    "name": "Бурундук",
+    "anchor": "FOREHEAD_CRYSTAL"
+  },
+  "projection": {
+    "active": true,
+    "kind": "DIEGETIC_INFO_WINDOW",
+    "shape": "GEOMETRIC_PANEL",
+    "color": "green",
+    "distance_m": 0.25,
+    "light_radius_m": 1.5
+  },
+  "visual_description": "Небольшое зелёное геометрическое энергетическое информационное голографическое окно рядом с лобным кристаллом"
+}
